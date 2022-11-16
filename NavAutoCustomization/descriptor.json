@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "ead48dc0-89db-0607-3bc6-98336f934a19",
+    "Name": "NavAutoCustomization",
+    "ModifiedOnUtc": "\/Date(1668626342000)\/",
+    "Maintainer": "Customer",
+    "Description": "Кастомизация объектов",
+    "DependsOn": []
+  }
+}
