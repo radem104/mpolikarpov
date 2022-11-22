@@ -3,8 +3,6 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Марка" />
-			<Item Name="Columns.NavId.Caption" Value="Id" />
-			<Item Name="Columns.NavName.Caption" Value="Название" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
 	</Group>

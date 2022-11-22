@@ -1,0 +1,113 @@
+= MetaData.Schema.UId "46400489-97a0-49a4-88bf-bfb294014c43"
+= MetaData.Schema.A2 "NavInvoice"
+= MetaData.Schema.A5 "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6"
+= MetaData.Schema.B6 "e9b4ebd1-315b-5ced-7e20-ff76f3cf7a8f"
+= MetaData.Schema.B8 "7.18.5.1500"
+= MetaData.Schema.EG1.UId "5979f46d-11c9-44b2-a6ae-e50abe5636a0"
+= MetaData.Schema.EG1.A2 "NavEntity_e378aeaEventsProcess"
+= MetaData.Schema.EG1.A5 "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6"
++ MetaData.Schema.EG1.B8 "7.18.5.1500"
+= MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
+= MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK4.["08594d74-60b0-45ce-bf17-bac1a8b127f7"].CK2.["496d4a3c-b644-4a65-b0ed-2534d9236da5"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["90027ac8-c9c3-4d21-a4f9-da1cde752cd1"].CK2.["d8b8410f-5c8a-4ddc-8fc2-353483452aed"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["5f3bfbbe-1820-44ca-92f1-6f993169b2dd"].CK2.["d7c806b7-a29b-4ce5-9167-b3319472e772"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["dbf48103-dcf6-4f53-a052-d727a95ea0b4"].CK2.["933bf2fc-d052-40c8-a3e0-bf60049da5d8"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["f0646c74-f291-474f-9a10-143ee868f1c9"].CK2.["b3d5b61f-7afe-48b5-a8cc-40317ea9c428"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
++ MetaData.Schema.EG1.Labels []
+= MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D2 {
+  "UId": "738e4c56-7254-5f69-5092-7cb8daac24ea",
+  "A2": "NavAmount",
+  "A3": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A4": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "969093e2-2b4e-463b-883a-3d3b8c61f0cd"
+}
++ MetaData.Schema.D2 {
+  "UId": "415cea06-ceca-c571-950f-d2e8fbd4929c",
+  "A2": "NavInvoiceType",
+  "A3": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A4": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "2f88b38d-8bc3-4060-9a1f-7bd5a56cf1bb",
+  "E6": true,
+  "E20": true,
+  "E17": "NavInvoiceTypeId",
+  "E18": "NavInvoiceTypeName"
+}
++ MetaData.Schema.D2 {
+  "UId": "ee563049-2573-3ddf-5eb9-fb79ec744f8c",
+  "A2": "NavFact",
+  "A3": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A4": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+}
++ MetaData.Schema.D2 {
+  "UId": "b70919e8-9a37-a2b8-827f-51aac3d8f274",
+  "A2": "NavAgreement",
+  "A3": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A4": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "98c50730-a608-4c3b-828a-a541ae9b2df0",
+  "E2": 1,
+  "E6": true,
+  "E20": true,
+  "E17": "NavAgreementId"
+}
++ MetaData.Schema.D2 {
+  "UId": "23c275d5-8a2f-5f9e-8812-014c2b0b3265",
+  "A2": "NavName",
+  "A3": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A4": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
+  "E2": 1
+}
++ MetaData.Schema.D2 {
+  "UId": "5a1597b9-d8d8-e188-47b1-ae02666d8d1a",
+  "A2": "NavPayDate",
+  "A3": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A4": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44",
+  "E2": 1
+}
++ MetaData.Schema.D2 {
+  "UId": "887183d5-3428-429a-1d9f-439554d4686e",
+  "A2": "NavDate",
+  "A3": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A4": "46400489-97a0-49a4-88bf-bfb294014c43",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "603d4960-a1a2-45e9-b232-206a54421b01",
+  "E2": 1
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","738e4c56-7254-5f69-5092-7cb8daac24ea","415cea06-ceca-c571-950f-d2e8fbd4929c","ee563049-2573-3ddf-5eb9-fb79ec744f8c","b70919e8-9a37-a2b8-827f-51aac3d8f274","23c275d5-8a2f-5f9e-8812-014c2b0b3265","5a1597b9-d8d8-e188-47b1-ae02666d8d1a","887183d5-3428-429a-1d9f-439554d4686e"]
+= MetaData.Schema.D20.A2 "NavInvoiceEvents"
+- MetaData.Schema.EG1.B6
+- MetaData.Schema.EG1.BK29
+- MetaData.Schema.EG1.BK30
+- MetaData.Schema.D1
+- MetaData.Schema.D20.A5
+- MetaData.Schema.D20.FA4
+- MetaData.Schema.D20.FA5
+- MetaData.Schema.D20.FA6
+- MetaData.Schema.D20.FA7
+- MetaData.Schema.D20.FA11
+- MetaData.Schema.D20.FA12
+- MetaData.Schema.D20.FA15
++ MetaData.Schema.B7 false
++ MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false
++ MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16 false
++ MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16 false
++ MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16 false
++ MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16 false
++ MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16 false

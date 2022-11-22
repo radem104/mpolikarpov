@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "a193c7be-abe0-4a56-b42d-2acc061b6d39",
+    "Name": "NavCredit",
+    "ModifiedOnUtc": "\/Date(1669100176000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Object",
+    "DependsOn": []
+  }
+}
