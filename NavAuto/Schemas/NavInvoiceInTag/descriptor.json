@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "9f8c5977-c9e7-4c7c-a488-606e447e16a0",
+    "Name": "NavInvoiceInTag",
+    "ModifiedOnUtc": "\/Date(1669131687000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Счёт"
+  }
+}

@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "2c0c345e-82c7-4ce6-b0cb-14679eb71546",
     "Name": "NavAuto",
-    "ModifiedOnUtc": "\/Date(1669040925000)\/",
+    "ModifiedOnUtc": "\/Date(1669126651000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Object",
-    "DependsOn": []
+    "Caption": "Автомобиль"
   }
 }

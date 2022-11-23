@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Страница редактирования: &quot;Договор&quot;" />
+			<Item Name="LocalizableStrings.NavAgreementCreditTabGroupd88d51abGroupCaption.Value" Value="Информация о кредите" />
+			<Item Name="LocalizableStrings.NavAgreementCreditTabTabCaption.Value" Value="Кредит" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "05e949df-bf99-48bc-b129-905c970010a2",
+    "Name": "ContactMiniPage",
+    "ModifiedOnUtc": "\/Date(1669121981000)\/",
+    "Parent": {
+      "UId": "2741dd1e-7c35-432c-915a-9aa228eb057b",
+      "Name": "ContactMiniPage"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "ContactMiniPage"
+  }
+}

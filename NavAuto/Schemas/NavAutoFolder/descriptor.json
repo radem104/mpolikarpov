@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "155dcab2-3a5e-49de-a1a6-783f3428b8a2",
+    "Name": "NavAutoFolder",
+    "ModifiedOnUtc": "\/Date(1669126657000)\/",
+    "Parent": {
+      "UId": "d602bf96-d029-4b07-9755-63c8f5cb5ed5",
+      "Name": "BaseFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Группа Автомобиль"
+  }
+}

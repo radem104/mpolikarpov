@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Связь кредит -&gt; автомобиль" />
+			<Item Name="Columns.NavAuto.Caption" Value="Автомобиль" />
+			<Item Name="Columns.NavCredit.Caption" Value="Кредит" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

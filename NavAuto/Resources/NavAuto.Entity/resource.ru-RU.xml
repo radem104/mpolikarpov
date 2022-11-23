@@ -10,6 +10,7 @@
 			<Item Name="Columns.NavKm.Caption" Value="Пробег" />
 			<Item Name="Columns.NavModel.Caption" Value="Модель" />
 			<Item Name="Columns.NavName.Caption" Value="Название" />
+			<Item Name="Columns.NavNotes.Caption" Value="Заметки" />
 			<Item Name="Columns.NavOwnersCount.Caption" Value="Количество владельцев" />
 			<Item Name="Columns.NavUsed.Caption" Value="С пробегом" />
 			<Item Name="Columns.NavVechcleNumber.Caption" Value="Номер двигателя" />

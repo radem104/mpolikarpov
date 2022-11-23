@@ -14,6 +14,7 @@
 			<Item Name="Columns.NavFullCreditAmount.Caption" Value="Полная стоимость кредита" />
 			<Item Name="Columns.NavInitialFee.Caption" Value="Первоначальный взнос" />
 			<Item Name="Columns.NavName.Caption" Value="Номер" />
+			<Item Name="Columns.NavNotes.Caption" Value="Заметки" />
 			<Item Name="Columns.NavPaymentPlanDate.Caption" Value="Дата графика платежей" />
 			<Item Name="Columns.NavSumma.Caption" Value="Сумма" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />

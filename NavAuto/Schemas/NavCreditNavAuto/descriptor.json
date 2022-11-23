@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "14f2402b-016c-4707-a497-3756328d6a20",
+    "Name": "NavCreditNavAuto",
+    "ModifiedOnUtc": "\/Date(1669119314000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Связь кредит -> автомобиль"
+  }
+}

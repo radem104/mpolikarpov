@@ -18,6 +18,10 @@
 = MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 + MetaData.Schema.EG1.Labels []
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D4 "8d3414ac-0d28-fd82-f219-964e50f879de"
 + MetaData.Schema.D2 {
   "UId": "fcff3121-bdfc-f19f-8461-44426c92114f",
   "A2": "NavAmount",
@@ -119,7 +123,16 @@
   "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
   "E2": 1
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","fcff3121-bdfc-f19f-8461-44426c92114f","c09030db-9c89-04b9-de64-73d272d7cb5b","870af4ad-feff-86ba-6a0b-03ee5b9ddf18","0d1e2c6d-dcbf-f6b3-24e1-0661ab04fca1","917e79d1-6c31-11c6-6e57-17011c481ec2","ccb711d4-b74f-13a7-7c4c-d51294d42ed7","61de6845-f362-684b-f1f2-897686f782db","0c8e3c22-df61-c3ef-ff66-450e190bb7a2","ce9666f5-2c9f-ac83-6f58-1cbef2daec2e","9e930e8e-19a8-ae9d-8e12-b5139b21dcec","8d3414ac-0d28-fd82-f219-964e50f879de"]
++ MetaData.Schema.D2 {
+  "UId": "24fea6ac-7141-44da-832d-65ed17410795",
+  "A2": "NavNotes",
+  "A3": "2c0c345e-82c7-4ce6-b0cb-14679eb71546",
+  "A4": "2c0c345e-82c7-4ce6-b0cb-14679eb71546",
+  "A5": "11a14a2c-0a28-4aad-99b1-b3a1e63c2da6",
+  "S2": "c0f04627-4620-4bc0-84e5-9419dc8516b1",
+  "E5": false
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","fcff3121-bdfc-f19f-8461-44426c92114f","c09030db-9c89-04b9-de64-73d272d7cb5b","870af4ad-feff-86ba-6a0b-03ee5b9ddf18","0d1e2c6d-dcbf-f6b3-24e1-0661ab04fca1","917e79d1-6c31-11c6-6e57-17011c481ec2","ccb711d4-b74f-13a7-7c4c-d51294d42ed7","61de6845-f362-684b-f1f2-897686f782db","0c8e3c22-df61-c3ef-ff66-450e190bb7a2","ce9666f5-2c9f-ac83-6f58-1cbef2daec2e","9e930e8e-19a8-ae9d-8e12-b5139b21dcec","8d3414ac-0d28-fd82-f219-964e50f879de","24fea6ac-7141-44da-832d-65ed17410795"]
 = MetaData.Schema.D20.A2 "NavAutoEvents"
 - MetaData.Schema.EG1.B6
 - MetaData.Schema.EG1.BK29

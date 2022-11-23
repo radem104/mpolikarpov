@@ -9,6 +9,7 @@
 			<Item Name="Columns.NavFact.Caption" Value="Оплачен" />
 			<Item Name="Columns.NavInvoiceType.Caption" Value="Тип счета" />
 			<Item Name="Columns.NavName.Caption" Value="Название" />
+			<Item Name="Columns.NavNotes.Caption" Value="Заметки" />
 			<Item Name="Columns.NavPayDate.Caption" Value="Дата оплаты" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
