@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "18b6ce4f-e3de-4c51-b5c0-2fe910c3f60e",
+    "Name": "NavCreditFolder",
+    "ModifiedOnUtc": "\/Date(1669290088000)\/",
+    "Parent": {
+      "UId": "d602bf96-d029-4b07-9755-63c8f5cb5ed5",
+      "Name": "BaseFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Группа Кредитная программа"
+  }
+}

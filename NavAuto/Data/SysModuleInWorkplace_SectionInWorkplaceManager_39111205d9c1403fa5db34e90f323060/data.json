@@ -1,0 +1,26 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "39111205-d9c1-403f-a5db-34e90f323060"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "6c48e37a-79d0-4161-8f01-dd19b22fcfaf",
+          "DisplayValue": "Менеджер"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "0677706b-1930-4799-8800-fde6ce73e2a1",
+          "DisplayValue": "Кредитная программа"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 30
+        }
+      ]
+    }
+  ]
+}

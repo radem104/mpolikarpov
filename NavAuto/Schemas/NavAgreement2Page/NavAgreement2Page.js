@@ -1,7 +1,23 @@
-define("NavAgreement2Page", [], function() {
+define("NavAgreement2Page", ["BusinessRuleModule", "ServiceHelper"], function(BusinessRuleModule, ServiceHelper) {
 	return {
 		entitySchemaName: "NavAgreement",
-		attributes: {},
+		attributes: {
+			/*"IsModelItemsEnabled": {
+				"dataValueType": Terrasoft.DataValueType.BOOLEAN,
+				"value": true,
+				"dependencies": [{
+					"columns": ["NavDate", "NavSumma"],
+					"methodName": "setCardLockoutStatus"
+				}]
+			}*/
+			"SetNewNavName": {
+				"dataValueType": Terrasoft.DataValueType.TEXT,
+				"dependencies": [{
+					"columns": ["NavName"],
+					"methodName": "deleteSymbolsInNavName"
+				}]
+			}
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
@@ -13,8 +29,227 @@ define("NavAgreement2Page", [], function() {
 				}
 			}
 		}/**SCHEMA_DETAILS*/,
-		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
-		methods: {},
+		businessRules: /**SCHEMA_BUSINESS_RULES*/{
+			"NavAgreementCreditTab": {
+				"cbe64473-85d9-45f4-808b-5fd3ad93b357": {
+					"uId": "cbe64473-85d9-45f4-808b-5fd3ad93b357",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 0,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavAuto"
+							}
+						},
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavContact"
+							}
+						}
+					]
+				}
+			},
+			"NavInitialFee": {
+				"87a5c7f8-52ab-4eb6-8d38-34b04f372536": {
+					"uId": "87a5c7f8-52ab-4eb6-8d38-34b04f372536",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavCredit"
+							}
+						}
+					]
+				}
+			},
+			"NavFullCreditAmount": {
+				"bc8f8231-fa4e-4bce-8d55-72b5d6a0466d": {
+					"uId": "bc8f8231-fa4e-4bce-8d55-72b5d6a0466d",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavCredit"
+							}
+						}
+					]
+				}
+			},
+			"NavCreditPeriod": {
+				"5a2baf76-f1a4-4935-b1e8-ebd10af16d96": {
+					"uId": "5a2baf76-f1a4-4935-b1e8-ebd10af16d96",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavCredit"
+							}
+						}
+					]
+				}
+			},
+			"NavCreditAmount": {
+				"30ffbb28-39c8-4853-8e9d-f43450f558ad": {
+					"uId": "30ffbb28-39c8-4853-8e9d-f43450f558ad",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavCredit"
+							}
+						}
+					]
+				}
+			},
+			"NavDate": {
+				"9d46b9e0-56c0-48eb-8c3f-14f079a1a728": {
+					"uId": "9d46b9e0-56c0-48eb-8c3f-14f079a1a728",
+					"enabled": false,
+					"removed": false,
+					"ruleType": 0,
+					"property": 0,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 3,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "IsModelItemsEnabled"
+							},
+							"rightExpression": {
+								"type": 0,
+								"value": true,
+								"dataValueType": 12
+							}
+						}
+					]
+				},
+				"d8d3e21b-98c0-496b-9cce-4db698b1da40": {
+					"uId": "d8d3e21b-98c0-496b-9cce-4db698b1da40",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavAuto"
+							}
+						},
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavContact"
+							}
+						}
+					]
+				}
+			},
+			"NavSumma": {
+				"f91d17b8-bd9a-4b73-ae89-aee48bcf0800": {
+					"uId": "f91d17b8-bd9a-4b73-ae89-aee48bcf0800",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavAuto"
+							}
+						},
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavContact"
+							}
+						}
+					]
+				}
+			},
+			"NavCredit": {
+				"f2fbb9bb-b75e-49c9-96a6-9dabb2da0771": {
+					"uId": "f2fbb9bb-b75e-49c9-96a6-9dabb2da0771",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavAuto"
+							}
+						},
+						{
+							"comparisonType": 2,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "NavContact"
+							}
+						}
+					]
+				}
+			}
+		}/**SCHEMA_BUSINESS_RULES*/,
+		methods: {			
+			deleteSymbolsInNavName: async function() {
+				debugger;
+				let name = this.$NavName;
+				if (name && /\D/g.test(name)) {
+					this.$NavName = await name.replace(/[^-\d]/g, "");
+				} 
+			}
+			/*setCardLockoutStatus: function() {
+				this.set("IsModelItemsEnabled", false);
+				
+			},
+			onEntityInitialized: function() {
+                this.callParent(arguments);
+                this.setCardLockoutStatus();
+            }*/
+		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
@@ -53,7 +288,7 @@ define("NavAgreement2Page", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "NavDatef8481820-4760-4ab5-85ff-57a3bfd475b7",
+				"name": "NavContact219b2914-3a67-4242-b006-3a2391ad4314",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -62,7 +297,7 @@ define("NavAgreement2Page", [], function() {
 						"row": 2,
 						"layoutName": "ProfileContainer"
 					},
-					"bindTo": "NavDate"
+					"bindTo": "NavContact"
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
@@ -70,7 +305,7 @@ define("NavAgreement2Page", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "NavContact219b2914-3a67-4242-b006-3a2391ad4314",
+				"name": "NavDatef8481820-4760-4ab5-85ff-57a3bfd475b7",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -79,7 +314,8 @@ define("NavAgreement2Page", [], function() {
 						"row": 3,
 						"layoutName": "ProfileContainer"
 					},
-					"bindTo": "NavContact"
+					"bindTo": "NavDate",
+					"enabled": false
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
@@ -96,7 +332,8 @@ define("NavAgreement2Page", [], function() {
 						"row": 4,
 						"layoutName": "ProfileContainer"
 					},
-					"bindTo": "NavSumma"
+					"bindTo": "NavSumma",
+					"enabled": false
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
@@ -131,7 +368,9 @@ define("NavAgreement2Page", [], function() {
 						"row": 6,
 						"layoutName": "ProfileContainer"
 					},
-					"bindTo": "NavCredit"
+					"bindTo": "NavCredit",
+					"enabled": false,
+					"contentType": 5
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
@@ -182,7 +421,7 @@ define("NavAgreement2Page", [], function() {
 				"name": "NavPaymentPlanDateca37b5ae-a81c-498e-a607-b31fae5ba392",
 				"values": {
 					"layout": {
-						"colSpan": 6,
+						"colSpan": 8,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 0,
@@ -200,7 +439,7 @@ define("NavAgreement2Page", [], function() {
 				"name": "NavFactSumma6829c791-521c-4cd0-95b6-4612e6a0ac9a",
 				"values": {
 					"layout": {
-						"colSpan": 12,
+						"colSpan": 8,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 1,
@@ -218,7 +457,7 @@ define("NavAgreement2Page", [], function() {
 				"name": "NavInitialFee2b712632-7f97-46e8-a03b-fb91c9faddd0",
 				"values": {
 					"layout": {
-						"colSpan": 12,
+						"colSpan": 8,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 2,
@@ -235,7 +474,7 @@ define("NavAgreement2Page", [], function() {
 				"name": "NavFullCreditAmount5c006e86-c823-4634-b998-23ad3c8776cb",
 				"values": {
 					"layout": {
-						"colSpan": 12,
+						"colSpan": 8,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 3,
@@ -252,7 +491,7 @@ define("NavAgreement2Page", [], function() {
 				"name": "NavCreditPeriod764ca0e1-0732-4dc1-adfb-3cc53a5ab84f",
 				"values": {
 					"layout": {
-						"colSpan": 12,
+						"colSpan": 8,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 4,
@@ -269,7 +508,7 @@ define("NavAgreement2Page", [], function() {
 				"name": "NavCreditAmount454341f3-a6c0-47b2-b7cb-3e80826032fe",
 				"values": {
 					"layout": {
-						"colSpan": 12,
+						"colSpan": 8,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 5,

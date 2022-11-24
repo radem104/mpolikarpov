@@ -1,4 +1,4 @@
-define("NavAuto1Page", [], function() {
+define("NavAuto1Page", ["BusinessRuleModule"], function(BusinessRuleModule) {
 	return {
 		entitySchemaName: "NavAuto",
 		attributes: {},
@@ -13,6 +13,72 @@ define("NavAuto1Page", [], function() {
 				}
 			}
 		}/**SCHEMA_DETAILS*/,
+		rules: {
+			"NavKm": {
+				"BindParametrVisibleAutoKmByUsed": {
+					"ruleType": BusinessRuleModule.enums.RuleType.BINDPARAMETER,
+					"property": BusinessRuleModule.enums.Property.VISIBLE,
+					"conditions": [
+						{
+							"leftExpression": {
+								"type": BusinessRuleModule.enums.ValueType.ATTRIBUTE,
+								"attribute": "NavUsed"
+							},
+							
+							"comparisonType": Terrasoft.ComparisonType.EQUAL,
+							
+							"rightExpression": {
+								"type": BusinessRuleModule.enums.ValueType.CONSTANT,
+								"value": true
+							}
+						},
+					]
+				}
+			},
+			"NavOwnersCount": {
+				"BindParametrVisibleAutoOwnersCountByUsed": {
+					"ruleType": BusinessRuleModule.enums.RuleType.BINDPARAMETER,
+					"property": BusinessRuleModule.enums.Property.VISIBLE,
+					"conditions": [
+						{
+							"leftExpression": {
+								"type": BusinessRuleModule.enums.ValueType.ATTRIBUTE,
+								"attribute": "NavUsed"
+							},
+							
+							"comparisonType": Terrasoft.ComparisonType.EQUAL,
+							
+							"rightExpression": {
+								"type": BusinessRuleModule.enums.ValueType.CONSTANT,
+								"value": true
+							}
+						},
+					]
+				}
+			},
+			//правило на поле Был в дтп 
+			"NavInAccident": {
+				"BindParametrVisibleAutoInAccidentByUsed": {
+					"ruleType": BusinessRuleModule.enums.RuleType.BINDPARAMETER,
+					"property": BusinessRuleModule.enums.Property.VISIBLE,
+					"conditions": [
+						{
+							"leftExpression": {
+								"type": BusinessRuleModule.enums.ValueType.ATTRIBUTE,
+								"attribute": "NavUsed"
+							},
+							
+							"comparisonType": Terrasoft.ComparisonType.EQUAL,
+							
+							"rightExpression": {
+								"type": BusinessRuleModule.enums.ValueType.CONSTANT,
+								"value": true
+							}
+						},
+					]
+				}
+			},
+		},
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
