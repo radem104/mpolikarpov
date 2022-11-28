@@ -28,7 +28,8 @@ define("NavCredit1Page", [], function() {
 				if(startDate) {
 					let startDateAddYear = new Date(startDate.getFullYear() + 1, startDate.getMonth(), startDate.getDate());
 					if (startDateAddYear.getTime() > finishDate.getTime()) {
-						invalidMessage = "Дата окончания должна быть больше даты начала не менее, чем на год";
+						debugger;
+						invalidMessage = this.get("Resources.Strings.InvalidDateMessage");
 					}
 				} 
 				return {

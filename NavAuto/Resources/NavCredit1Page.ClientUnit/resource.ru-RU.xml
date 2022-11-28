@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Кредитная программа&quot;" />
+			<Item Name="LocalizableStrings.InvalidDateMessage.Value" Value="Дата окончания должна быть больше даты начала не менее, чем на год" />
 		</Items>
 	</Group>
 </Resources>

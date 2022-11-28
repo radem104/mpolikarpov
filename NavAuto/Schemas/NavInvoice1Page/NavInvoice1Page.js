@@ -2,14 +2,26 @@ define("NavInvoice1Page", [], function() {
 	return {
 		entitySchemaName: "NavInvoice",
 		attributes: {
-			  "IsModelItemsEnabled": {
+			"IsModelItemsEnabled": {
                 dataValueType: Terrasoft.DataValueType.BOOLEAN,
                 value: true,
                 dependencies: [{
-					//columns: ["NavFact"],
                     methodName: "setCardLockoutStatus"
                 }]
-            }
+            },
+			"NavAgreement": {
+				"dataValueType": Terrasoft.DataValueType.LOOKUP,
+				"lookupListConfig": {
+              		"columns": ["NavCredit", "NavSumma"],
+				}
+			},
+			"SetInvoiceSum": {
+				"dataValueType": Terrasoft.DataValueType.MONEY,
+				"dependencies": [{
+					"columns": ["NavAgreement"],
+					"methodName": "setInvoiceSum"
+				}]
+			}
 		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
@@ -28,22 +40,28 @@ define("NavInvoice1Page", [], function() {
                 this.callParent(arguments);
                 this.setLockoutStatus();
             },
-			
+
 			onSaved: function(response, config) {
 				this.callParent(arguments);
 				this.setLockoutStatus();
 			},
-			
+
 			setLockoutStatus: function() {
-				 let status = this.$NavFact;
-				 if (status) {
-				 	this.$IsModelItemsEnabled = false;
-				 }
-				 else {
-				 	this.$IsModelItemsEnabled = true;
-				 }
-				//return !this.$NavFact;
-			}			
+				this.$IsModelItemsEnabled = !this.$NavFact;				 
+			},
+			
+			setInvoiceSum: function() {
+				let agreement = this.$NavAgreement;
+				if (agreement) {
+					if (!agreement.NavCredit) {
+						this.$NavAmount = agreement.NavSumma;
+					}
+					else
+					{
+						this.$NavAmount = 0;
+					}
+				}
+			}
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[

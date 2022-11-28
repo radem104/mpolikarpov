@@ -3,8 +3,10 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Договор&quot;" />
+			<Item Name="LocalizableStrings.InvalidCreditMessage.Value" Value="Срок кредитной программы не в рамках даты договора. Выберите другую" />
 			<Item Name="LocalizableStrings.NavAgreementCreditTabGroupd88d51abGroupCaption.Value" Value="Информация о кредите" />
 			<Item Name="LocalizableStrings.NavAgreementCreditTabTabCaption.Value" Value="Кредит" />
+			<Item Name="LocalizableStrings.RecalculateCreditButtonCaption.Value" Value="Пересчитать кредит" />
 		</Items>
 	</Group>
 </Resources>

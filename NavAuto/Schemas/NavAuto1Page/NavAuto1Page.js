@@ -56,7 +56,6 @@ define("NavAuto1Page", ["BusinessRuleModule"], function(BusinessRuleModule) {
 					]
 				}
 			},
-			//правило на поле Был в дтп 
 			"NavInAccident": {
 				"BindParametrVisibleAutoInAccidentByUsed": {
 					"ruleType": BusinessRuleModule.enums.RuleType.BINDPARAMETER,

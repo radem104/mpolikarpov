@@ -2,19 +2,45 @@ define("NavAgreement2Page", ["BusinessRuleModule", "ServiceHelper"], function(Bu
 	return {
 		entitySchemaName: "NavAgreement",
 		attributes: {
-			/*"IsModelItemsEnabled": {
-				"dataValueType": Terrasoft.DataValueType.BOOLEAN,
-				"value": true,
-				"dependencies": [{
-					"columns": ["NavDate", "NavSumma"],
-					"methodName": "setCardLockoutStatus"
-				}]
-			}*/
 			"SetNewNavName": {
 				"dataValueType": Terrasoft.DataValueType.TEXT,
 				"dependencies": [{
 					"columns": ["NavName"],
 					"methodName": "deleteSymbolsInNavName"
+				}]
+			},
+			"NavCredit": {
+				"dataValueType": Terrasoft.DataValueType.LOOKUP,
+          		"lookupListConfig": {
+              		"columns": ["NavDateStart","NavDateEnd", "NavCreditPeriod", "NavPercent"],
+					"filters": [
+						function() {
+							var filterGroup = Ext.create("Terrasoft.FilterGroup");
+								filterGroup.add("CreditFilter", Terrasoft.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, "[NavCreditNavAuto:NavCredit].NavAuto", this.$NavAuto));
+								return filterGroup;							
+						}
+					]
+            	}
+			},
+			"NavCreditPeriod": {
+				"dataValueType": Terrasoft.DataValueType.INTEGER,
+				"dependencies": [{
+					"columns": ["NavCredit"],
+					"methodName": "setCreditPeriod"
+				}]
+			},
+
+			"NavAuto": {
+				"dataValueType": Terrasoft.DataValueType.LOOKUP,
+				"lookupListConfig": {
+              		"columns": ["NavUsed", "NavAmount", "NavModel.NavRecommendedAmount"],
+				}
+			},
+			"SetAgreementSum": { 
+				"dataValueType": Terrasoft.DataValueType.MONEY,
+				"dependencies": [{
+					"columns": ["NavAuto"],
+					"methodName": "setSumUsedAuto"
 				}]
 			}
 		},
@@ -235,23 +261,91 @@ define("NavAgreement2Page", ["BusinessRuleModule", "ServiceHelper"], function(Bu
 		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {			
 			deleteSymbolsInNavName: async function() {
-				debugger;
 				let name = this.$NavName;
 				if (name && /\D/g.test(name)) {
 					this.$NavName = await name.replace(/[^-\d]/g, "");
 				} 
-			}
-			/*setCardLockoutStatus: function() {
-				this.set("IsModelItemsEnabled", false);
-				
 			},
-			onEntityInitialized: function() {
-                this.callParent(arguments);
-                this.setCardLockoutStatus();
-            }*/
+
+			setValidationConfig: function() {
+				this.callParent(arguments);
+				this.addColumnValidator("NavCredit", this.creditDateValidate);
+			},
+			
+			creditDateValidate: function() {
+				let invalidMessage = "";
+				let credit = this.$NavCredit;
+				let agreementDate = this.$NavDate;
+				if (credit && credit.NavDateEnd && agreementDate) {
+					if (credit.NavDateEnd.getTime() < agreementDate.getTime() || credit.NavDateStart.getTime() > agreementDate.getTime()) {
+						invalidMessage = this.get("Resources.Strings.InvalidCreditMessage");
+					}
+				}
+				return {
+					invalidMessage: invalidMessage
+				};
+			},
+
+			setCreditPeriod: function() {
+				let credit = this.$NavCredit;
+				this.$NavCreditPeriod = credit.NavCreditPeriod;
+			},
+
+			setSumUsedAuto: function() {
+				let auto = this.$NavAuto;
+				if (auto) {
+					if (auto.NavUsed) {
+						this.$NavSumma = auto.NavAmount;
+					}
+					else {
+						this.$NavSumma = auto["NavModel.NavRecommendedAmount"];
+					}
+				}
+			},
+
+			onRecalculateCreditClick: function() {
+				let sum = this.$NavSumma;
+				let initialFee = this.$NavInitialFee;
+				let percent = this.$NavCredit.NavPercent;
+				let creditPeriod = this.$NavCreditPeriod;
+
+				let creditAmount = sum - initialFee;		
+				this.$NavCreditAmount = creditAmount;
+				let fullCreditAmount = (percent / 100 * creditPeriod * creditAmount) + creditAmount;
+				this.$NavFullCreditAmount  = fullCreditAmount.toFixed(2);	
+			},
+
+			isCreditInfoSet: function() {
+				if(this.$NavSumma && this.$NavInitialFee && this.$NavCredit.NavPercent && this.$NavCreditPeriod)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+            }
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
+			{
+				"operation": "insert",
+                "parentName": "RightContainer",
+                "propertyName": "items",
+                "name": "RecalculateCreditButton",
+                "values": {
+                    "itemType": Terrasoft.ViewItemType.BUTTON,
+                    "caption": { bindTo: "Resources.Strings.RecalculateCreditButtonCaption" },
+                    "click": { bindTo: "onRecalculateCreditClick" },
+                    "enabled": { bindTo: "isCreditInfoSet" },
+                    "layout": {
+                        "column": 1,
+                        "row": 6,
+                        "colSpan": 1
+                    },
+					"style": Terrasoft.controls.ButtonEnums.style.RED
+                }
+			},
 			{
 				"operation": "insert",
 				"name": "NavName0513ab46-1468-423c-911d-60cbc683226d",
