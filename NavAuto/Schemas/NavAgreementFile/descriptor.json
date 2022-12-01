@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "4176e76c-766e-4443-acf4-71c286b63672",
+    "Name": "NavAgreementFile",
+    "ModifiedOnUtc": "\/Date(1669131131000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Договор"
+  }
+}

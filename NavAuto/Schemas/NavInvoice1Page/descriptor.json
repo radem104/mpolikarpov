@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "bd2b20f1-ec6f-4471-b46f-86b64329e102",
+    "Name": "NavInvoice1Page",
+    "ModifiedOnUtc": "\/Date(1669295161000)\/",
+    "Parent": {
+      "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
+      "Name": "BaseModulePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница редактирования: \"Счёт\""
+  }
+}

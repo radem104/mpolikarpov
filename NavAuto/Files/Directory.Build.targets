@@ -1,0 +1,19 @@
+<Project>
+	<ItemGroup Condition="'$(PkgPath)' != ''">
+		<Compile Remove="$(PkgPath)/NavAuto/Assemblies/**" />
+		<Compile Remove="$(PkgPath)/NavAuto/Data/**" />
+		<Compile Remove="$(PkgPath)/NavAuto/SqlScripts/**" />
+		<Compile Remove="$(PkgPath)/NavAuto/Schemas\**" />
+		<Compile Remove="$(PkgPath)/NavAuto/Resources/**" />
+		<EmbeddedResource Remove="$(PkgPath)/NavAuto/Assemblies/**" />
+		<EmbeddedResource Remove="$(PkgPath)/NavAuto/Data/**" />
+		<EmbeddedResource Remove="$(PkgPath)/NavAuto/SqlScripts/**" />
+		<EmbeddedResource Remove="$(PkgPath)/NavAuto/Schemas/**" />
+		<EmbeddedResource Remove="$(PkgPath)/NavAuto/Resources/**" />
+		<None Remove="$(PkgPath)/NavAuto/Assemblies/**" />
+		<None Remove="$(PkgPath)/NavAuto/Data/**" />
+		<None Remove="$(PkgPath)/NavAuto/SqlScripts/**" />
+		<None Remove="$(PkgPath)/NavAuto/Schemas/**" />
+		<None Remove="$(PkgPath)/NavAuto/Resources/**" />
+  </ItemGroup>
+</Project>

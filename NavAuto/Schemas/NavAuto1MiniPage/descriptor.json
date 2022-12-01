@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "be2d730e-8aca-4bd9-a263-52046b54d9a1",
+    "Name": "NavAuto1MiniPage",
+    "ModifiedOnUtc": "\/Date(1669128928000)\/",
+    "Parent": {
+      "UId": "8e06a577-08e4-424e-bd89-798a34e1b928",
+      "Name": "BaseMiniPage"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "NavAuto1MiniPage"
+  }
+}

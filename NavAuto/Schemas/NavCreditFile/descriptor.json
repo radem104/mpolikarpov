@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "fc1a6359-48b0-451d-a9aa-28ad784cb779",
+    "Name": "NavCreditFile",
+    "ModifiedOnUtc": "\/Date(1669290085000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Кредитная программа"
+  }
+}

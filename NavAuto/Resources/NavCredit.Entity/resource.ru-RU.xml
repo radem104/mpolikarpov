@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Кредитная программа" />
+			<Item Name="Columns.NavCreditPeriod.Caption" Value="Срок кредита" />
+			<Item Name="Columns.NavDateEnd.Caption" Value="Дата окончания" />
+			<Item Name="Columns.NavDateStart.Caption" Value="Дата начала" />
+			<Item Name="Columns.NavNotes.Caption" Value="Заметки" />
+			<Item Name="Columns.NavPercent.Caption" Value="Ставка в год" />
+			<Item Name="EventsProcessSchema.Caption" Value="Кредитная программа" />
+			<Item Name="EventsProcessSchema.Description" Value="Проверка дат" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_6ee3c8df66004a458a65c88bc9d4c70f.Caption" Value="LaneSet 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_6ee3c8df66004a458a65c88bc9d4c70f.Lanes.Lane_8a740e3f713a4ed6b99bb36126b24987.Caption" Value="Lane 1" />
+			<Item Name="EventsProcessSchema.Parameters.DcmEntityUtil.Caption" Value="DcmEntityUtil" />
+			<Item Name="EventsProcessSchema.Parameters.ProcessSchemaListeners.Caption" Value="ProcessSchemaListeners" />
+		</Items>
+	</Group>
+</Resources>

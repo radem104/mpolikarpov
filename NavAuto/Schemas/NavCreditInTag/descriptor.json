@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "934baad8-6f59-45d9-8e13-07c2f8bbb6bc",
+    "Name": "NavCreditInTag",
+    "ModifiedOnUtc": "\/Date(1669290096000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Кредитная программа"
+  }
+}
