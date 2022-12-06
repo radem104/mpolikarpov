@@ -8,7 +8,7 @@ namespace Terrasoft.Configuration
     [EntityEventListener(SchemaName = "NavInvoice")]
     public class NavInvoiceEntityEventListener : BaseEntityEventListener
     {
-        private const int manualTypeCode = 1; //тип счета "Вручную
+        private const int manualTypeCode = 1; //Code of manual invoice type
         public override void OnSaving(object sender, EntityBeforeEventArgs e)
         {
             base.OnSaving(sender, e);
@@ -23,31 +23,26 @@ namespace Terrasoft.Configuration
                     var esq = new EntitySchemaQuery(userConnection.EntitySchemaManager, "NavInvoiceType");
                     var invTypeId = esq.AddColumn("Id");
                     var code = esq.AddColumn("NavCode");
+                    var esqFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, "NavCode", manualTypeCode);
+                    esq.Filters.Add(esqFilter);
                     var invTypes = esq.GetEntityCollection(userConnection);
-                    foreach (var invType in invTypes)
+
+                    if (invTypes.Count != 0)
                     {
-                        if ((invType.GetColumnValue(code.Name) != null ? Convert.ToInt32(invType.GetColumnValue(code.Name)) : 0) == manualTypeCode)
-                        {
-                            invoice.SetColumnValue("NavInvoiceTypeId", invType.GetColumnValue(invTypeId.Name));
-                        }
+                        invoice.SetColumnValue("NavInvoiceTypeId", invTypes[0].GetColumnValue(invTypeId.Name));
                     }
+
                 }
 
                 AddInvoiceSum(invoice);
             }
             else
             {
-                throw new Exception("Ошибка. Можно завести только один счёт по договору за одну и ту же дату");
+                var message = LocalizableStringHelper.GetValue(userConnection, "NavInvoiceEntityEventListener", "InvoiceLimitMessage");
+                throw new Exception(message);
             }
         }
 
-      /*  public override void OnUpdating(object sender, EntityBeforeEventArgs e)
-        {
-            base.OnSaving(sender, e);
-            var invoice = (Entity)sender;
-
-            AddInvoiceSum(invoice);
-        }*/
         public override void OnDeleting(object sender, EntityBeforeEventArgs e)
         {
             base.OnDeleting(sender, e);
@@ -56,7 +51,10 @@ namespace Terrasoft.Configuration
             DeleteInvoiceSum(invoice);
         }
 
-
+        /// <summary>
+        /// Augment invoice in agreement if invoice fact is true
+        /// </summary>
+        /// <param name="invoice"></param>
 
         private void AddInvoiceSum(Entity invoice)
         {
@@ -92,11 +90,16 @@ namespace Terrasoft.Configuration
                     }
                     else
                     {
-                        throw new Exception("Сумма счетов превышает сумму в договоре");
+                        var message = LocalizableStringHelper.GetValue(userConnection, "NavInvoiceEntityEventListener", "TotalGraterMessage");
+                        throw new Exception(message);
                     }
                 }
             }
         }
+        /// <summary>
+        /// Subtract invoice sum from agreement if invoice deleted
+        /// </summary>
+        /// <param name="invoice"></param>
         private void DeleteInvoiceSum(Entity invoice)
         {
             var userConnection = invoice.UserConnection;
@@ -125,7 +128,11 @@ namespace Terrasoft.Configuration
                 }
             }
         }
-
+        /// <summary>
+        /// Validate 1 in voice per day
+        /// </summary>
+        /// <param name="invoice"></param>
+        /// <returns></returns>
         private bool CheckExistInvoiceInDate(Entity invoice)
         {
             var userConnection = invoice.UserConnection;

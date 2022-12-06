@@ -7,6 +7,11 @@ namespace Terrasoft.Configuration
     [EntityEventListener(SchemaName = "NavAgreement")]
     public class NavAgreementEntityEventListener : BaseEntityEventListener
     {
+        /// <summary>
+        /// Set to contact first agreement date
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public override void OnSaved(object sender, EntityAfterEventArgs e)
         {
             base.OnSaved(sender, e);

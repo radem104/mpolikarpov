@@ -3,6 +3,8 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="NavInvoiceEntityEventListener " />
+			<Item Name="LocalizableStrings.InvoiceLimitMessage.Value" Value="За день можно создать только один счет на договор" />
+			<Item Name="LocalizableStrings.TotalGraterMessage.Value" Value="Сумма счетов больше суммы договора" />
 		</Items>
 	</Group>
 </Resources>

@@ -28,7 +28,6 @@ define("NavCredit1Page", [], function() {
 				if(startDate) {
 					let startDateAddYear = new Date(startDate.getFullYear() + 1, startDate.getMonth(), startDate.getDate());
 					if (startDateAddYear.getTime() > finishDate.getTime()) {
-						debugger;
 						invalidMessage = this.get("Resources.Strings.InvalidDateMessage");
 					}
 				} 

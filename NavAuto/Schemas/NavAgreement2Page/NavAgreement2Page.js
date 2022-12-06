@@ -316,14 +316,7 @@ define("NavAgreement2Page", ["BusinessRuleModule", "ServiceHelper"], function(Bu
 			},
 
 			isCreditInfoSet: function() {
-				if(this.$NavSumma && this.$NavInitialFee && this.$NavCredit.NavPercent && this.$NavCreditPeriod)
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
+				return (this.$NavSumma && this.$NavInitialFee && this.$NavCredit.NavPercent && this.$NavCreditPeriod);				
             }
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
