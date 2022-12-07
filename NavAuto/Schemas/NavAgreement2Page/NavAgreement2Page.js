@@ -316,35 +316,35 @@ define("NavAgreement2Page", ["BusinessRuleModule", "ServiceHelper"], function(Bu
 			},
 
 			isCreditInfoSet: function() {
-				if(this.$NavSumma && this.$NavInitialFee && this.$NavCredit.NavPercent && this.$NavCreditPeriod)
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
+				return (this.$NavSumma && this.$NavInitialFee && this.$NavCredit.NavPercent && this.$NavCreditPeriod);				
             }
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
 				"operation": "insert",
-                "parentName": "RightContainer",
-                "propertyName": "items",
-                "name": "RecalculateCreditButton",
-                "values": {
-                    "itemType": Terrasoft.ViewItemType.BUTTON,
-                    "caption": { bindTo: "Resources.Strings.RecalculateCreditButtonCaption" },
-                    "click": { bindTo: "onRecalculateCreditClick" },
-                    "enabled": { bindTo: "isCreditInfoSet" },
-                    "layout": {
-                        "column": 1,
-                        "row": 6,
-                        "colSpan": 1
-                    },
-					"style": Terrasoft.controls.ButtonEnums.style.RED
-                }
+				"name": "RecalculateCreditButton",
+				"values": {
+					"itemType": 5,
+					"caption": {
+						"bindTo": "Resources.Strings.RecalculateCreditButtonCaption"
+					},
+					"click": {
+						"bindTo": "onRecalculateCreditClick"
+					},
+					"enabled": {
+						"bindTo": "isCreditInfoSet"
+					},
+					"layout": {
+						"column": 1,
+						"row": 6,
+						"colSpan": 1
+					},
+					"style": "red"
+				},
+				"parentName": "RightContainer",
+				"propertyName": "items",
+				"index": 2
 			},
 			{
 				"operation": "insert",

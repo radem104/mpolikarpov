@@ -3,6 +3,8 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="NavInvoiceEntityEventListener " />
+			<Item Name="LocalizableStrings.InvoiceLimitMessage.Value" Value="Daily limit of invoices per agreement is exceeded" />
+			<Item Name="LocalizableStrings.TotalGraterMessage.Value" Value="Sum of invoices grater than sum in agreement" />
 		</Items>
 	</Group>
 </Resources>

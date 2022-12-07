@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Схема раздела: &quot;Договор&quot;" />
+			<Item Name="LocalizableStrings.AgreementExtractButton.Value" Value="Получить выписку" />
 			<Item Name="LocalizableStrings.Caption.Value" Value="Договор" />
 		</Items>
 	</Group>
